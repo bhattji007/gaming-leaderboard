@@ -15,6 +15,11 @@ const contestantRoutes = require('./routes/contestant.js');
 const gameRoutes = require('./routes/games.js');
 const leaderboardRoutes = require('./routes/leaderboard.js');
 
+
+app.get('/health',async (req, res) => {
+  res.status(500).json({ messsage:"SERVER IS HEALTHY" });
+
+})
 // Use routes
 app.use('/contestants', contestantRoutes);
 app.use('/games', gameRoutes);
