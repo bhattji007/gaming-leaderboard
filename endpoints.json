@@ -267,6 +267,26 @@
             }
         },
         {
+            "name": "upvote a game",
+            "request": {
+                "method": "post",
+                "url": {
+                    "raw": "http://localhost:3000/games/67a607b2aee910a94d926782/upvote",
+                    "path": [
+                        "games",
+                        "67a607b2aee910a94d926782",
+                        "upvote"
+                        
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
             "name": "update score of a participant",
             "request": {
                 "method": "PATCH",
@@ -330,6 +350,22 @@
                         "leaderboard",
                         "game",
                         "67a5e69ff74a66c334484a1d"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },{
+            "name": "popularity",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/popularity",
+                    "path": [
+                        "popularity"
                     ],
                     "protocol": "http",
                     "host": [
