@@ -17,7 +17,7 @@ const leaderboardRoutes = require('./routes/leaderboard.js');
 
 
 app.get('/health',async (req, res) => {
-  res.status(500).json({ messsage:"SERVER IS HEALTHY" });
+  res.status(200).json({ messsage:"SERVER IS HEALTHY" });
 
 })
 // Use routes
