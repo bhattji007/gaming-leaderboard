@@ -1,4 +1,4 @@
-// models/Contestant.js
+
 const mongoose = require('mongoose');
 
 const ContestantSchema = new mongoose.Schema(

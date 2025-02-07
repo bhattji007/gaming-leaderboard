@@ -1,4 +1,4 @@
-// models/Game.js
+
 const mongoose = require('mongoose');
 
 const GameSchema = new mongoose.Schema(
@@ -7,6 +7,7 @@ const GameSchema = new mongoose.Schema(
     status: { type: String, enum: ['active', 'ended'], default: 'active' },
     startTime: { type: Date, default: Date.now },
     endTime: { type: Date },
+    upvotes: { type: Number, default: 0 } 
   },
   { timestamps: true }
 );

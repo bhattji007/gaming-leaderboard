@@ -1,12 +1,11 @@
-// routes/leaderboard.js
+
 const express = require('express');
 const router = express.Router();
 const Game = require('../models/Game');
 const Participation = require('../models/Participation');
 const Contestant = require('../models/Contestant');
 
-// Global leaderboard: aggregate participation scores for games on a specific date.
-// Example: GET /leaderboard/global?date=2025-02-07
+
 router.get('/global', async (req, res) => {
   try {
     const { date } = req.query;
@@ -17,13 +16,11 @@ router.get('/global', async (req, res) => {
     const endDate = new Date(date);
     endDate.setDate(endDate.getDate() + 1);
 
-    // Find games that started on the given date.
     const games = await Game.find({
       startTime: { $gte: startDate, $lt: endDate },
     });
     const gameIds = games.map((game) => game._id);
 
-    // Aggregate scores for each contestant across these games.
     const leaderboard = await Participation.aggregate([
       { $match: { game: { $in: gameIds } } },
       {
@@ -59,8 +56,7 @@ router.get('/global', async (req, res) => {
   }
 });
 
-// Game leaderboard: for a specific game, list participants sorted by score.
-// Example: GET /leaderboard/game/606d1f... (game ID)
+
 router.get('/game/:gameId', async (req, res) => {
   try {
     const { gameId } = req.params;

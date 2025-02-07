@@ -1,4 +1,4 @@
-// models/Participation.js
+
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -14,7 +14,7 @@ const ParticipationSchema = new Schema(
   { timestamps: true }
 );
 
-// Prevent the same contestant from joining the same game twice.
+
 ParticipationSchema.index({ game: 1, contestant: 1 }, { unique: true });
 
 module.exports = mongoose.model('Participation', ParticipationSchema);

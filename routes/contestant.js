@@ -1,9 +1,9 @@
-// routes/contestants.js
+
 const express = require('express');
 const router = express.Router();
 const Contestant = require('../models/Contestant');
 
-// Create a new contestant
+
 router.post('/', async (req, res) => {
   try {
     const { name, email } = req.body;
@@ -16,7 +16,7 @@ router.post('/', async (req, res) => {
   }
 });
 
-// Get all contestants
+
 router.get('/', async (req, res) => {
   try {
     const contestants = await Contestant.find();
@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get a specific contestant
+
 router.get('/:id', async (req, res) => {
   try {
     const contestant = await Contestant.findById(req.params.id);
@@ -37,7 +37,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Update a contestant
+
 router.put('/:id', async (req, res) => {
   try {
     const { name, email } = req.body;
@@ -49,7 +49,7 @@ router.put('/:id', async (req, res) => {
   }
 });
 
-// Delete a contestant
+
 router.delete('/:id', async (req, res) => {
   try {
     const contestant = await Contestant.findByIdAndDelete(req.params.id);
