@@ -1,0 +1,343 @@
+{
+    "info": {
+        "_postman_id": "8972410c-bd43-4734-9348-a608497973ab",
+        "name": "leaderboard",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "create a contestant",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/contestants",
+                    "path": [
+                        "contestants"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"Alice Johnson\",\n  \"email\": \"alice.johnson@example.com\"\n}\n"
+                }
+            }
+        },
+        {
+            "name": "get all contestant",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/contestants",
+                    "path": [
+                        "contestants"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "get specific contestant",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/contestants/67a5e4ca57456a198339b387",
+                    "path": [
+                        "contestants",
+                        "67a5e4ca57456a198339b387"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "update a contestant",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:3000/contestants/67a5e4ca57456a198339b387",
+                    "path": [
+                        "contestants",
+                        "67a5e4ca57456a198339b387"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"Alice J. Johnson\",\n  \"email\": \"alice.j.johnson@example.com\"\n}\n"
+                }
+            }
+        },
+        {
+            "name": "delete a contestant",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/contestants/67a5e4ca57456a198339b387",
+                    "path": [
+                        "contestants",
+                        "67a5e4ca57456a198339b387"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "create a game",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/games",
+                    "path": [
+                        "games"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"name\": \"Game 1\"\n}\n"
+                }
+            }
+        },
+        {
+            "name": "get all games",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/games",
+                    "path": [
+                        "games"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "get specific game",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/games/67a5e5e4f74a66c334484a15",
+                    "path": [
+                        "games",
+                        "67a5e5e4f74a66c334484a15"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "update a game",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:3000/games/67a5e5e4f74a66c334484a15",
+                    "path": [
+                        "games",
+                        "67a5e5e4f74a66c334484a15"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"status\": \"ended\"\n}\n"
+                }
+            }
+        },
+        {
+            "name": "delete a game",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/games/67a5e5e4f74a66c334484a15",
+                    "path": [
+                        "games",
+                        "67a5e5e4f74a66c334484a15"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "add a contestant to a game",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3000/games/67a5e69ff74a66c334484a1d/participants",
+                    "path": [
+                        "games",
+                        "67a5e69ff74a66c334484a1d",
+                        "participants"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"contestantId\": \"67a5e6bbf74a66c334484a21\"\n}\n"
+                }
+            }
+        },
+        {
+            "name": "remove a participant from the game",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3000/games/67a5e69ff74a66c334484a1d/participants/67a5e6bbf74a66c334484a21",
+                    "path": [
+                        "games",
+                        "67a5e69ff74a66c334484a1d",
+                        "participants",
+                        "67a5e6bbf74a66c334484a21"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "update score of a participant",
+            "request": {
+                "method": "PATCH",
+                "url": {
+                    "raw": "http://localhost:3000/games/67a5e69ff74a66c334484a1d/participants/67a5e6bbf74a66c334484a21",
+                    "path": [
+                        "games",
+                        "67a5e69ff74a66c334484a1d",
+                        "participants",
+                        "67a5e6bbf74a66c334484a21"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"score\": 150\n}\n"
+                }
+            }
+        },
+        {
+            "name": "global leaderpoins",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/leaderboard/global?date=2025-02-07",
+                    "query": [
+                        {
+                            "key": "date",
+                            "value": "2025-02-07"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "leaderboard",
+                        "global"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        },
+        {
+            "name": "game leaderboard",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3000/leaderboard/game/67a5e69ff74a66c334484a1d",
+                    "path": [
+                        "leaderboard",
+                        "game",
+                        "67a5e69ff74a66c334484a1d"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3000"
+                }
+            }
+        }
+    ]
+}
