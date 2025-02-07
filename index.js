@@ -12,6 +12,10 @@ const app = express();
 app.use(express.json());
 app.use(morgan('dev'));
 app.use('/contestants', contestantRoutes);
+app.use('/health', async (req, res) => {
+  res.send('Hello World');
+});
+
 app.use('/games', gameRoutes);
 app.use('/leaderboard', leaderboardRoutes);
 app.use('/popularity', popularityRoutes);
