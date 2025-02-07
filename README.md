@@ -1,6 +1,8 @@
 # Game Leaderboard Application
 
-This repository contains a Game Leaderboard Application built using Node.js, Express, and MongoDB Atlas. The application allows you to manage contestants, games, and game participations. It also provides endpoints to retrieve leaderboards both globally (aggregated by date) and for individual games.
+This repository contains a Game Leaderboard Application built using Node.js, Express, and MongoDB Atlas. The application allows you to manage contestants, games, and game participation. It also provides endpoints to retrieve leaderboards globally (aggregated by date) and for individual games.
+below is a hosted link 
+https://gaming-leaderboard-1.onrender.com
 
 ## Features
 
